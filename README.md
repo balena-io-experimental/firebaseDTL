@@ -56,6 +56,7 @@ Here is a diagram of the circuit:
 
 After some time your firebase should look something like this:
 ![Data structure](/docs/images/dataStructure.png)
+
 Where the long alphanumeric number at the top is the unique ID for your raspberry pi and the following sublevels are year, integer day of the year and sample number. For a sample interval of 10 minutes you will get 144 samples. Each sample object consists of temp and time, the temp object contains a list of all the connected sensors. Here we can see one sensor connected, called 28-00000054b548.
 
 ### Extending the system
