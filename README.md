@@ -25,6 +25,7 @@ The recipe for this project is as follows:
 1. Setup an empty [firebase][5]. 
 1. Add your firebase url as an environment variable in the resin application dashboard called FIREBASE_URL.
 1. Add a second environment variable called INTERVAL_TIME and set its value to the time between sensor measurement, this value is set in seconds and defaults to 600 seconds (10 minutes) if you do not set a time interval.
+![Environment Variables](/docs/images/env_vars.png)
 
 
 ### Wiring
@@ -32,7 +33,7 @@ The recipe for this project is as follows:
 1. Connect up the DS18b20 as shown in the diagram, with pin1 connected to ground (GND), pin2 connected to GPIO4 of the raspberry pi and pin3 connected to 3.3V. Additionally you will need to connect a resistor between pin2 (the data line) and the 3.3V supply voltage. This resistor can be any value between 4.7KΩ and 10KΩ.
 1. Connect the ethernet cable to the raspberry pi and power it up using the micro usb.
 Here is a diagram of the circuit:
-![Circuit diagram](/docs/images/diagram.jpg)
+![Circuit diagram](/docs/images/diagram.png)
 
 [1]:http://www.raspberrypi.org/
 [2]:http://www.maplin.co.uk/p/ad-102-breadboard-ag10l
