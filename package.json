@@ -1,0 +1,16 @@
+{
+  "name": "firebaseDTL",
+  "version": "0.0.0",
+  "description": "firebase powered digital temperature sensor node",
+  "main": "app.js",
+  "dependencies": {
+    "tty.js": "^0.2.13",
+    "ds18x20": "^0.1.1",
+    "firebase-client": "^0.1.0",
+    "moment": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "modprobe w1-gpio && modprobe w1-therm && node app.js"
+  }
+}
