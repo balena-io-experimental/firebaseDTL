@@ -45,8 +45,11 @@ $ git push resin master
 '''
 
 ### Wiring
+
 **Warning: disconnect the raspberry pi for power before wiring up these parts**
-1. Connect up the DS18b20 as shown in the diagram, with pin1 connected to ground (GND), pin2 connected to GPIO4 of the raspberry pi and pin3 connected to 3.3V. Additionally you will need to connect a resistor between pin2 (the data line) and the 3.3V supply voltage. This resistor can be any value between 4.7KΩ and 10KΩ.
+
+1. Connect up the DS18b20 as shown in the diagram, with pin1 connected to ground (GND), pin2 connected to GPIO4 of the raspberry pi and pin3 connected to 3.3V. 
+1. Additionally you will need to connect a resistor between pin2 (the data line) and the 3.3V supply voltage. This resistor can be any value between 4.7KΩ and 10KΩ.
 1. Connect the ethernet cable to the raspberry pi and power it up using the micro usb.
 Here is a diagram of the circuit:
 ![Circuit diagram](/docs/images/diagram.png)
