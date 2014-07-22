@@ -45,7 +45,7 @@ Here is a diagram of the circuit:
 
 `$ git clone https://github.com/shaunmulligan/firebaseDTL.git`
 
-then add the resin remote: (replacing <myUserName> and <myApplicationName> with yours for the resin.io dashboard)
+then add the resin remote: (replacing <myUserName> and <myApplicationName> with yours from the resin.io dashboard)
 
 `$ git remote add resin git@git.staging.resin.io:<myUserName>/<myApplicationName>.git`
 
