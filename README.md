@@ -13,7 +13,8 @@ The recipe for this project is as follows:
 
 * Raspberry Pi with ethernet cable for internet connectivity and
   USB -> micro USB cable for power.
-* one or more [DS18b20] digital temperature sensors.
+* one or more [DS18b20][6] digital temperature sensors.
+* a 4.7KΩ or 10KΩ.
 * A breadboard, for example the [AD-102 from Maplin][2].
 * Jumper wires to connect everything. For example, these
   [male-to-female connectors from Maplin][3].
@@ -66,3 +67,4 @@ To extend the system to multiple sensors, all you need to do is connect up the a
 [3]:http://www.maplin.co.uk/p/raspberry-pi-compatible-jumper-wires-malefemale-n75de
 [4]:http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
 [5]:https://www.firebase.com/
+[6]:https://www.sparkfun.com/products/245
