@@ -5,12 +5,18 @@ var intervalTime = process.env.INTERVAL_TIME || 600;
 var firebaseURL = process.env.FIREBASE_URL;
 var deviceName = process.env.RESIN_DEVICE_UUID;
 
-var firebase = new FirebaseClient({
-	  url: firebaseURL
-	});
-//get temperature every 10 minutes
-setInterval( function() {
-	//upload new sample to firebase
+var firebase = new FirebaseClient({url: firebaseURL});
+
+sensor.list(function (err, listOfDeviceIds) {
+    console.log('Temp sensors available: '+listOfDeviceIds);
+    push2Firebase();
+	setInterval( function() {
+		push2Firebase();
+	}, intervalTime*1000);
+});
+		
+function push2Firebase() {
+	//reads all temp sensors and uploads to firebase
 	var resource = getSampleURL(deviceName);
 	sensor.getAll(function (err, tempObj) {
 		firebase.set(resource, { temp: tempObj, time: moment() })
@@ -21,10 +27,8 @@ setInterval( function() {
 		  console.log(err);
 		});
 	});	
-}, intervalTime*1000);		
-	
-//helper functions
-//#######################################################################################
+}
+
 function getSampleURL(device) {
 	var year = moment().year();
 	var day = moment().dayOfYear();
