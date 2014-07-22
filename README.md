@@ -20,30 +20,6 @@ The recipe for this project is as follows:
 
 ## Build Instructions
 
-### Setup
-
-1. Setup an empty [firebase][5]. 
-1. Add your firebase url as an environment variable in the resin application dashboard called FIREBASE_URL.
-1. Add a second environment variable called INTERVAL_TIME and set its value to the time between sensor measurement, this value is set in seconds and defaults to 600 seconds (10 minutes) if you do not set a time interval.
-![Environment Variables](/docs/images/env_vars.png)
-
-### Deploying the code
-
-1. start a new applicaton on resin.io and download the .zip file and extract it to your SD card. 
-1. Insert the SD card into the Rasoberry pi, connect the ethernet cable and power it up using the micro-usb cable.
-1. After about 10 minutes your new device should show up on the resin.io applications dashboard, you can now clone down the firebaseDTL folder:
-'''
-$ git clone https://github.com/shaunmulligan/firebaseDTL.git
-'''
-then add the resin remote: (replacing myUserName and myApplicationName with yours for the resin.io dashboard)
-'''
-$ git remote add resin git@git.staging.resin.io:<myUserName>/<myApplicationName>.git
-'''
-and finally push the code to your raspberry pi:
-'''
-$ git push resin master
-'''
-
 ### Wiring
 
 **Warning: disconnect the raspberry pi for power before wiring up these parts**
@@ -53,6 +29,28 @@ $ git push resin master
 1. Connect the ethernet cable to the raspberry pi and power it up using the micro usb.
 Here is a diagram of the circuit:
 ![Circuit diagram](/docs/images/diagram.png)
+
+### Resin.io Setup & Deployment
+
+1. If you haven't got a resin.io alpha account, visit [alpha.resin.io](http://alpha.resin.io) and sign up.
+1. start a new applicaton on resin.io, name it as you want, download the .zip file and extract it to your SD card. 
+1. Insert the SD card into the Rasoberry pi, connect the ethernet cable and power it up using the micro-usb cable.
+1. After about 10 minutes your new device should show up on the resin.io applications dashboard.
+1. Setup an empty [firebase][5] application. 
+1. Add your application's firebase url as an environment variable in the resin application dashboard called FIREBASE_URL.
+1. Add a second environment variable called INTERVAL_TIME and set its value to the time between sensor measurement, this value is set in seconds and defaults to 600 seconds (10 minutes) if you do not set a time interval.
+![Environment Variables](/docs/images/env_vars.png)
+1. you can now clone down the firebaseDTL folder:
+
+`$ git clone https://github.com/shaunmulligan/firebaseDTL.git`
+
+then add the resin remote: (replacing <myUserName> and <myApplicationName> with yours for the resin.io dashboard)
+
+`$ git remote add resin git@git.staging.resin.io:<myUserName>/<myApplicationName>.git`
+
+and finally push the code to your raspberry pi:
+
+`$ git push resin master`
 
 After some time your firebase should look something like this:
 ![Data structure](/docs/images/dataStructure.png)
