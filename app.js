@@ -8,7 +8,7 @@ var deviceName = process.env.RESIN_DEVICE_UUID;
 var firebase = new FirebaseClient({url: firebaseURL});
 
 sensor.list(function (err, listOfDeviceIds) {
-    console.log('Temp sensors available: '+listOfDeviceIds);
+    console.log('Available Sensors: '+listOfDeviceIds);
     push2Firebase();
 	setInterval( function() {
 		push2Firebase();
