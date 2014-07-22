@@ -32,7 +32,7 @@ Here is a diagram of the circuit:
 
 ### Resin.io Setup & Deployment
 
-1. If you haven't got a resin.io account, visit alpha.resin.io and sign up
+1. If you haven't got a resin.io alpha account, visit [alpha.resin.io](http://alpha.resin.io) and sign up.
 1. start a new applicaton on resin.io, name it as you want, download the .zip file and extract it to your SD card. 
 1. Insert the SD card into the Rasoberry pi, connect the ethernet cable and power it up using the micro-usb cable.
 1. After about 10 minutes your new device should show up on the resin.io applications dashboard.
