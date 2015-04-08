@@ -9,7 +9,6 @@
     "firebase-client": "^0.1.0",
     "moment": "^2.7.0"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "modprobe w1-gpio && modprobe w1-therm && node app.js"
   }
