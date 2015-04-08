@@ -11,7 +11,7 @@ sensor.list(function (err, listOfDeviceIds) {
     console.log('Available Sensors: '+listOfDeviceIds);
     push2Firebase();
 	setInterval( function() {
-		push2Firebase();
+		// push2Firebase();
 	}, intervalTime*1000);
 });
 		
