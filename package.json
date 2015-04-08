@@ -4,7 +4,6 @@
   "description": "firebase powered digital temperature sensor node",
   "main": "app.js",
   "dependencies": {
-    "tty.js": "^0.2.13",
     "ds18x20": "^0.1.1",
     "firebase-client": "^0.1.0",
     "moment": "^2.7.0"
